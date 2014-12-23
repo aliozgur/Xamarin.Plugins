@@ -8,7 +8,7 @@
        <owners>Ali Özgür</owners>
        <licenseUrl>https://github.com/jamesmontemagno/Xamarin.Plugins/blob/master/LICENSE.md</licenseUrl>
        <projectUrl>https://github.com/aliozgur/Xamarin.Plugins</projectUrl>
-      <iconUrl></iconUrl>
+      
        <requireLicenseAcceptance>false</requireLicenseAcceptance>
        <description>
           Device orientation plugin for your Xamarin.Forms project.
@@ -23,32 +23,35 @@
    </metadata>
    <files>
       <!--Core-->
-     <file src="DeviceOrientation.Forms.Plugin.Abstractions\bin\Release\DeviceOrientation.Forms.Plugin.Abstractions.dll" target="lib\portable-net45+wp8+win8+MonoAndroid10+MonoTouch10\DeviceOrientation.Forms.Plugin.Abstractions.dll" />
-     <file src="DeviceOrientation.Forms.Plugin.Abstractions\bin\Release\DeviceOrientation.Forms.Plugin.Abstractions.xml" target="lib\portable-net45+wp8+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\DeviceOrientation.Forms.Plugin.Abstractions.xml" />
-     <file src="DeviceOrientation.Forms.Plugin.Abstractions\bin\Release\DeviceOrientation.Forms.Plugin.Abstractions.pdb" target="lib\portable-net45+wp8+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\DeviceOrientation.Forms.Plugin.Abstractions.pdb" />
+     <file src="DeviceOrientation\DeviceOrientation.Forms.Plugin.Abstractions\bin\Release\DeviceOrientation.Forms.Plugin.Abstractions.dll" target="lib\portable-net45+wp8+win8+MonoAndroid10+MonoTouch10\DeviceOrientation.Forms.Plugin.Abstractions.dll" />
+     <file src="DeviceOrientation\DeviceOrientation.Forms.Plugin.Abstractions\bin\Release\DeviceOrientation.Forms.Plugin.Abstractions.xml" target="lib\portable-net45+wp8+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\DeviceOrientation.Forms.Plugin.Abstractions.xml" />
+     <file src="DeviceOrientation\DeviceOrientation.Forms.Plugin.Abstractions\bin\Release\DeviceOrientation.Forms.Plugin.Abstractions.pdb" target="lib\portable-net45+wp8+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\DeviceOrientation.Forms.Plugin.Abstractions.pdb" />
 
      <!--Win Phone Silverlight-->
-     <file src="DeviceOrientation.Forms.Plugin.WindowsPhone\bin\Release\DeviceOrientation.Forms.Plugin.WindowsPhone.dll" target="lib\wp8\DeviceOrientation.Forms.Plugin.WindowsPhone.dll" />
-     <file src="DeviceOrientation.Forms.Plugin.WindowsPhone\bin\Release\DeviceOrientation.Forms.Plugin.WindowsPhone.xml" target="lib\wp8\DeviceOrientation.Forms.Plugin.WindowsPhone.xml" />
-     <file src="DeviceOrientation.Forms.Plugin.WindowsPhone\bin\Release\DeviceOrientation.Forms.Plugin.WindowsPhone.pdb" target="lib\wp8\DeviceOrientation.Forms.Plugin.WindowsPhone.pdb" />
-     <file src="DeviceOrientation.Forms.Plugin.Abstractions\bin\Release\DeviceOrientation.Forms.Plugin.Abstractions.dll" target="lib\wp8\DeviceOrientation.Forms.Plugin.Abstractions.dll" />
-     <file src="DeviceOrientation.Forms.Plugin.Abstractions\bin\Release\DeviceOrientation.Forms.Plugin.Abstractions.xml" target="lib\wp8\DeviceOrientation.Forms.Plugin.Abstractions.xml" />
-     <file src="DeviceOrientation.Forms.Plugin.Abstractions\bin\Release\DeviceOrientation.Forms.Plugin.Abstractions.pdb" target="lib\wp8\DeviceOrientation.Forms.Plugin.Abstractions.pdb" />
+     <file src="DeviceOrientation\DeviceOrientation.Forms.Plugin.WindowsPhone\bin\Release\DeviceOrientation.Forms.Plugin.WindowsPhone.dll" target="lib\wp8\DeviceOrientation.Forms.Plugin.WindowsPhone.dll" />
+     <file src="DeviceOrientation\DeviceOrientation.Forms.Plugin.WindowsPhone\bin\Release\DeviceOrientation.Forms.Plugin.WindowsPhone.xml" target="lib\wp8\DeviceOrientation.Forms.Plugin.WindowsPhone.xml" />
+     <file src="DeviceOrientation\DeviceOrientation.Forms.Plugin.WindowsPhone\bin\Release\DeviceOrientation.Forms.Plugin.WindowsPhone.pdb" target="lib\wp8\DeviceOrientation.Forms.Plugin.WindowsPhone.pdb" />
+     <file src="DeviceOrientation\DeviceOrientation.Forms.Plugin.Abstractions\bin\Release\DeviceOrientation.Forms.Plugin.Abstractions.dll" target="lib\wp8\DeviceOrientation.Forms.Plugin.Abstractions.dll" />
+     <file src="DeviceOrientation\DeviceOrientation.Forms.Plugin.Abstractions\bin\Release\DeviceOrientation.Forms.Plugin.Abstractions.xml" target="lib\wp8\DeviceOrientation.Forms.Plugin.Abstractions.xml" />
+     <file src="DeviceOrientation\DeviceOrientation.Forms.Plugin.Abstractions\bin\Release\DeviceOrientation.Forms.Plugin.Abstractions.pdb" target="lib\wp8\DeviceOrientation.Forms.Plugin.Abstractions.pdb" />
 
      
      <!--Xamarin.Android-->
+     <!--
      <file src="DeviceOrientation.Forms.Plugin.Android\bin\Release\DeviceOrientation.Forms.Plugin.Android.dll" target="lib\MonoAndroid10\DeviceOrientation.Forms.Plugin.Android.dll" />
+     
      <file src="DeviceOrientation.Forms.Plugin.Android\bin\Release\DeviceOrientation.Forms.Plugin.Android.xml" target="lib\MonoAndroid10\DeviceOrientation.Forms.Plugin.Android.xml" />
      <file src="DeviceOrientation.Forms.Plugin.Android\bin\Release\DeviceOrientation.Forms.Plugin.Android.pdb" target="lib\MonoAndroid10\DeviceOrientation.Forms.Plugin.Android.pdb" />
      <file src="DeviceOrientation.Forms.Plugin.Abstractions\bin\Release\DeviceOrientation.Forms.Plugin.Abstractions.dll" target="lib\MonoAndroid10\DeviceOrientation.Forms.Plugin.Abstractions.dll" />
      <file src="DeviceOrientation.Forms.Plugin.Abstractions\bin\Release\DeviceOrientation.Forms.Plugin.Abstractions.xml" target="lib\MonoAndroid10\DeviceOrientation.Forms.Plugin.Abstractions.xml" />
      <file src="DeviceOrientation.Forms.Plugin.Abstractions\bin\Release\DeviceOrientation.Forms.Plugin.Abstractions.pdb" target="lib\MonoAndroid10\DeviceOrientation.Forms.Plugin.Abstractions.pdb" />
-
+    -->
+    
      <!--Xamarin.iOS-->
-     <file src="DeviceOrientation.Forms.Plugin.iOS\bin\iPhone\Release\DeviceOrientation.Forms.Plugin.iOS.dll" target="lib\MonoTouch10\DeviceOrientation.Forms.Plugin.iOS.dll" />
-     <file src="DeviceOrientation.Forms.Plugin.iOS\bin\iPhone\Release\DeviceOrientation.Forms.Plugin.iOS.xml" target="lib\MonoTouch10\DeviceOrientation.Forms.Plugin.iOS.xml" />
-     <file src="DeviceOrientation.Forms.Plugin.Abstractions\bin\Release\DeviceOrientation.Forms.Plugin.Abstractions.dll" target="lib\MonoTouch10\DeviceOrientation.Forms.Plugin.Abstractions.dll" />
-     <file src="DeviceOrientation.Forms.Plugin.Abstractions\bin\Release\DeviceOrientation.Forms.Plugin.Abstractions.xml" target="lib\MonoTouch10\DeviceOrientation.Forms.Plugin.Abstractions.xml" />
+     <file src="DeviceOrientation\DeviceOrientation.Forms.Plugin.iOS\bin\iPhone\Release\DeviceOrientation.Forms.Plugin.iOS.dll" target="lib\MonoTouch10\DeviceOrientation.Forms.Plugin.iOS.dll" />
+     <file src="DeviceOrientation\DeviceOrientation.Forms.Plugin.iOS\bin\iPhone\Release\DeviceOrientation.Forms.Plugin.iOS.xml" target="lib\MonoTouch10\DeviceOrientation.Forms.Plugin.iOS.xml" />
+     <file src="DeviceOrientation\DeviceOrientation.Forms.Plugin.Abstractions\bin\Release\DeviceOrientation.Forms.Plugin.Abstractions.dll" target="lib\MonoTouch10\DeviceOrientation.Forms.Plugin.Abstractions.dll" />
+     <file src="DeviceOrientation\DeviceOrientation.Forms.Plugin.Abstractions\bin\Release\DeviceOrientation.Forms.Plugin.Abstractions.xml" target="lib\MonoTouch10\DeviceOrientation.Forms.Plugin.Abstractions.xml" />
 
    </files>
 </package>

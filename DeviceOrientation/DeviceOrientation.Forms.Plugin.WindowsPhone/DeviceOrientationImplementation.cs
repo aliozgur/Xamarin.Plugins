@@ -2,6 +2,9 @@
 using System;
 using Xamarin.Forms;
 using DeviceOrientation.Forms.Plugin.WindowsPhone;
+using Windows.Devices.Sensors;
+using System.Windows;
+using Microsoft.Phone.Controls;
 
 [assembly: Dependency(typeof(DeviceOrientationImplementation))]
 namespace DeviceOrientation.Forms.Plugin.WindowsPhone
@@ -14,6 +17,30 @@ namespace DeviceOrientation.Forms.Plugin.WindowsPhone
         /// <summary>
         /// Used for registration with dependency service
         /// </summary>
-        public static void Init() { }
+        public static void Init() 
+        {
+            var rootFrame = (Application.Current.RootVisual as PhoneApplicationFrame);
+            rootFrame.OrientationChanged += rootFrame_OrientationChanged;
+        }
+
+        static void rootFrame_OrientationChanged(object sender, OrientationChangedEventArgs e)
+        {
+            bool isLandscape = (e.Orientation & PageOrientation.Landscape) == PageOrientation.Landscape;
+            var msg = new DeviceOrientationChangeMessage()
+            {
+                Orientation = isLandscape ? DeviceOrientations.Landscape : DeviceOrientations.Portrait
+            };
+            MessagingCenter.Send<DeviceOrientationChangeMessage>(msg, DeviceOrientationChangeMessage.MessageId);
+   
+        }
+
+        public DeviceOrientations GetOrientation()
+        {
+            PageOrientation currentOrientation = (Application.Current.RootVisual as PhoneApplicationFrame).Orientation;
+            bool isLandscape = (currentOrientation & PageOrientation.Landscape) == PageOrientation.Landscape;
+            return isLandscape ? DeviceOrientations.Landscape : DeviceOrientations.Portrait;
+           
+           
+        }
     }
 }
