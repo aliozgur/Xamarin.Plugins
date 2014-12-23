@@ -6,7 +6,7 @@
        <title>Device Orientation Plugin for Xamarin.Forms</title>
        <authors>Ali Özgür</authors>
        <owners>Ali Özgür</owners>
-       <licenseUrl>https://github.com/jamesmontemagno/Xamarin.Plugins/blob/master/LICENSE.md</licenseUrl>
+       <licenseUrl>https://github.com/aliozgur/Xamarin.Plugins/blob/master/LICENSE.md</licenseUrl>
        <projectUrl>https://github.com/aliozgur/Xamarin.Plugins</projectUrl>
       
        <requireLicenseAcceptance>false</requireLicenseAcceptance>
