@@ -38,11 +38,6 @@ Do not forget to unsubscribe from OrientationChangeMessage messages (OnDisappear
 MessagingCenter.Unsubscribe<DeviceOrientationChangeMessage>(this, DeviceOrientationChangeMessage.MessageId);
 ```
 
-#### Known Issues
-
-* I was not able to build and package the Android library with Visual Studio because my Xamarin.Android evaluation expired.May be James Montemango could help me with this
-* Due to the first problem even the code runs on a production Android app the plugin version was not included in the Android project of the demo solution
-
 #### Contributors
 * [aliozgur](https://github.com/aliozgur)
 

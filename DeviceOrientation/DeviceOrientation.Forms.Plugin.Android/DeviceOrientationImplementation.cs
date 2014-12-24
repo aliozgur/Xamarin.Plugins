@@ -18,16 +18,25 @@ namespace DeviceOrientation.Forms.Plugin.Droid
     /// </summary>
     public class DeviceOrientationImplementation : IDeviceOrientation
     {
-        private static OrientationEventListener _orientationListener;
-
+      
         /// <summary>
         /// Used for registration with dependency service
         /// </summary>
         public static void Init() 
         { 
-            _orientationListener = new OrientationListener(Application.Context, SensorDelay.Normal);
         }
-
+        
+        public static void NotifyOrientationChange(global::Android.Content.Res.Configuration newConfig)
+        {
+            bool isLandscape = newConfig.Orientation == global::Android.Content.Res.Orientation.Landscape;
+            var msg = new DeviceOrientationChangeMessage()
+            {
+                Orientation = isLandscape ? DeviceOrientations.Landscape : DeviceOrientations.Portrait
+            };
+            MessagingCenter.Send<DeviceOrientationChangeMessage>(msg, DeviceOrientationChangeMessage.MessageId);
+           
+        }
+            
         #region IDeviceOrientation implementation
 
         /// <summary>
@@ -36,12 +45,11 @@ namespace DeviceOrientation.Forms.Plugin.Droid
         /// <returns>The orientation.</returns>
         public DeviceOrientations GetOrientation()
         {
-            IWindowManager windowManager = Application.Context .GetSystemService(Context.WindowService).JavaCast<IWindowManager>();
+            IWindowManager windowManager = Android.App.Application.Context.GetSystemService(Context.WindowService).JavaCast<IWindowManager>();
 
             var rotation = windowManager.DefaultDisplay.Rotation;
             bool isLandscape = rotation == SurfaceOrientation.Rotation90 || rotation == SurfaceOrientation.Rotation270;
             return isLandscape ? DeviceOrientations.Landscape : DeviceOrientations.Portrait;
-
         }
 
         #endregion

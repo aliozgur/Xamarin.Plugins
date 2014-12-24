@@ -19,7 +19,10 @@ namespace DeviceOrientation.Forms.Plugin.WindowsPhone
         /// </summary>
         public static void Init() 
         {
-            var rootFrame = (Application.Current.RootVisual as PhoneApplicationFrame);
+            var rootFrame = (System.Windows.Application.Current.RootVisual as PhoneApplicationFrame);
+            if (rootFrame == null)
+                return;
+
             rootFrame.OrientationChanged += rootFrame_OrientationChanged;
         }
 
@@ -34,9 +37,13 @@ namespace DeviceOrientation.Forms.Plugin.WindowsPhone
    
         }
 
+        /// <summary>
+        /// Gets the orientation.
+        /// </summary>
+        /// <returns>The orientation.</returns>
         public DeviceOrientations GetOrientation()
         {
-            PageOrientation currentOrientation = (Application.Current.RootVisual as PhoneApplicationFrame).Orientation;
+            PageOrientation currentOrientation = (System.Windows.Application.Current.RootVisual as PhoneApplicationFrame).Orientation;
             bool isLandscape = (currentOrientation & PageOrientation.Landscape) == PageOrientation.Landscape;
             return isLandscape ? DeviceOrientations.Landscape : DeviceOrientations.Portrait;
            

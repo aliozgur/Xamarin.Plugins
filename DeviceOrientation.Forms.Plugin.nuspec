@@ -2,8 +2,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
    <metadata minClientVersion="2.8.1">
        <id>Xam.Plugins.Forms.DeviceOrientation</id>
-       <version>1.0.0.2</version>
-       <title>Device Orientation Plugin for Xamarin.Forms</title>
+       <version>1.0.0.6</version>
+       <title>Device Orientation Plugin for Xamarin Forms</title>
        <authors>Ali Özgür</authors>
        <owners>Ali Özgür</owners>
        <licenseUrl>https://github.com/aliozgur/Xamarin.Plugins/blob/master/LICENSE.md</licenseUrl>
@@ -37,15 +37,15 @@
 
      
      <!--Xamarin.Android-->
-     <!--
-     <file src="DeviceOrientation.Forms.Plugin.Android\bin\Release\DeviceOrientation.Forms.Plugin.Android.dll" target="lib\MonoAndroid10\DeviceOrientation.Forms.Plugin.Android.dll" />
      
-     <file src="DeviceOrientation.Forms.Plugin.Android\bin\Release\DeviceOrientation.Forms.Plugin.Android.xml" target="lib\MonoAndroid10\DeviceOrientation.Forms.Plugin.Android.xml" />
-     <file src="DeviceOrientation.Forms.Plugin.Android\bin\Release\DeviceOrientation.Forms.Plugin.Android.pdb" target="lib\MonoAndroid10\DeviceOrientation.Forms.Plugin.Android.pdb" />
-     <file src="DeviceOrientation.Forms.Plugin.Abstractions\bin\Release\DeviceOrientation.Forms.Plugin.Abstractions.dll" target="lib\MonoAndroid10\DeviceOrientation.Forms.Plugin.Abstractions.dll" />
-     <file src="DeviceOrientation.Forms.Plugin.Abstractions\bin\Release\DeviceOrientation.Forms.Plugin.Abstractions.xml" target="lib\MonoAndroid10\DeviceOrientation.Forms.Plugin.Abstractions.xml" />
-     <file src="DeviceOrientation.Forms.Plugin.Abstractions\bin\Release\DeviceOrientation.Forms.Plugin.Abstractions.pdb" target="lib\MonoAndroid10\DeviceOrientation.Forms.Plugin.Abstractions.pdb" />
-    -->
+     <file src="DeviceOrientation\DeviceOrientation.Forms.Plugin.Android\bin\Release\DeviceOrientation.Forms.Plugin.Android.dll" target="lib\MonoAndroid10\DeviceOrientation.Forms.Plugin.Android.dll" />
+     
+     <file src="DeviceOrientation\DeviceOrientation.Forms.Plugin.Android\bin\Release\DeviceOrientation.Forms.Plugin.Android.xml" target="lib\MonoAndroid10\DeviceOrientation.Forms.Plugin.Android.xml" />
+     <file src="DeviceOrientation\DeviceOrientation.Forms.Plugin.Android\bin\Release\DeviceOrientation.Forms.Plugin.Android.pdb" target="lib\MonoAndroid10\DeviceOrientation.Forms.Plugin.Android.pdb" />
+     <file src="DeviceOrientation\DeviceOrientation.Forms.Plugin.Abstractions\bin\Release\DeviceOrientation.Forms.Plugin.Abstractions.dll" target="lib\MonoAndroid10\DeviceOrientation.Forms.Plugin.Abstractions.dll" />
+     <file src="DeviceOrientation\DeviceOrientation.Forms.Plugin.Abstractions\bin\Release\DeviceOrientation.Forms.Plugin.Abstractions.xml" target="lib\MonoAndroid10\DeviceOrientation.Forms.Plugin.Abstractions.xml" />
+     <file src="DeviceOrientation\DeviceOrientation.Forms.Plugin.Abstractions\bin\Release\DeviceOrientation.Forms.Plugin.Abstractions.pdb" target="lib\MonoAndroid10\DeviceOrientation.Forms.Plugin.Abstractions.pdb" />
+    
     
      <!--Xamarin.iOS-->
      <file src="DeviceOrientation\DeviceOrientation.Forms.Plugin.iOS\bin\iPhone\Release\DeviceOrientation.Forms.Plugin.iOS.dll" target="lib\MonoTouch10\DeviceOrientation.Forms.Plugin.iOS.dll" />

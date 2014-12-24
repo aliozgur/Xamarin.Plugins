@@ -15,6 +15,16 @@ DeviceOrientationImplementation.Init();
 
 You must do this AFTER you call Xamarin.Forms.Init();
 
+#### Android Specific
+If you want to be notified of orientation change messages you should override OnConfigurationChange of the MainActivity
+``` 
+public override void OnConfigurationChanged(global::Android.Content.Res.Configuration newConfig)
+{
+	base.OnConfigurationChanged(newConfig);
+	DeviceOrientationImplementation.NotifyOrientationChange(newConfig);
+}
+```
+
 #### Usage
 
 You can get instance of IDeviceOrientation using DependencyService
@@ -25,11 +35,12 @@ var orientation = svc.GetOrientation();
 ```
 
 Or, you can subscribe to orientation change message (OnApperaring override of a Page would be a good place to subscribe)
+
 ``` 
 MessagingCenter.Subscribe<DeviceOrientationChangeMessage>(this, DeviceOrientationChangeMessage.MessageId, (message) =>
-                {
-                    //TODO: HandleOrientationChange(message);
-                });
+{
+    //TODO: HandleOrientationChange(message);
+});
 ```
 
 Do not forget to unsubscribe from OrientationChangeMessage messages (OnDisappearing override of a Page would be a good place to unsubscribe)
@@ -37,11 +48,6 @@ Do not forget to unsubscribe from OrientationChangeMessage messages (OnDisappear
 ``` 
 MessagingCenter.Unsubscribe<DeviceOrientationChangeMessage>(this, DeviceOrientationChangeMessage.MessageId);
 ```
-
-#### Known Issues
-
-* I was not able to build and package the Android library with Visual Studio because my Xamarin.Android evaluation expired.May be James Montemango could help me with this
-* Due to the first problem even the code runs on a production Android app the plugin version was not included in the Android project of the demo solution
 
 #### Contributors
 * [aliozgur](https://github.com/aliozgur)
