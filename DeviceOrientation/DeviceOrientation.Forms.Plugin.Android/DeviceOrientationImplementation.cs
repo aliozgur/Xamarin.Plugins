@@ -26,6 +26,10 @@ namespace DeviceOrientation.Forms.Plugin.Droid
         { 
         }
         
+        /// <summary>
+        /// Send orientation change message through MessagingCenter
+        /// </summary>
+        /// <param name="newConfig">New configuration</param>
         public static void NotifyOrientationChange(global::Android.Content.Res.Configuration newConfig)
         {
             bool isLandscape = newConfig.Orientation == global::Android.Content.Res.Orientation.Landscape;
