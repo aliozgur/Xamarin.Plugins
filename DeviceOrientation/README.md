@@ -48,6 +48,8 @@ Do not forget to unsubscribe from OrientationChangeMessage messages (OnDisappear
 ``` 
 MessagingCenter.Unsubscribe<DeviceOrientationChangeMessage>(this, DeviceOrientationChangeMessage.MessageId);
 ```
+#### Knwon Issues
+* Not tested on WinPhone
 
 #### Contributors
 * [aliozgur](https://github.com/aliozgur)
