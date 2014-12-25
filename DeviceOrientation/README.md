@@ -15,7 +15,7 @@ DeviceOrientationImplementation.Init();
 
 You must do this AFTER you call Xamarin.Forms.Init();
 
-#### Android Specific
+##### Android Specific
 If you want to be notified of orientation change messages you should override OnConfigurationChange of the MainActivity in your Android project
 ``` 
 public override void OnConfigurationChanged(global::Android.Content.Res.Configuration newConfig)
@@ -25,7 +25,7 @@ public override void OnConfigurationChanged(global::Android.Content.Res.Configur
 }
 ```
 
-#### Windows Phone Specific
+##### Windows Phone Specific
 If you want to be notified of orientation change messages you should override OnConfigurationChange of the MainPage in your WinPhone project
 ``` 
 protected override void OnOrientationChanged(OrientationChangedEventArgs e)
