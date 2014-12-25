@@ -37,8 +37,7 @@ namespace DeviceOrientation.Forms.Plugin.Droid
             {
                 Orientation = isLandscape ? DeviceOrientations.Landscape : DeviceOrientations.Portrait
             };
-            MessagingCenter.Send<DeviceOrientationChangeMessage>(msg, DeviceOrientationChangeMessage.MessageId);
-           
+            MessagingCenter.Send<DeviceOrientationChangeMessage>(msg, DeviceOrientationChangeMessage.MessageId);           
         }
             
         #region IDeviceOrientation implementation

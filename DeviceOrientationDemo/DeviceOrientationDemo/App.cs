@@ -6,8 +6,8 @@ namespace DeviceOrientationDemo
     public class App
     {
         public static Page GetMainPage()
-        {	
-            return new MainPage();
+        {
+            return new NavigationPage(new MainPage());
         }
     }
 }

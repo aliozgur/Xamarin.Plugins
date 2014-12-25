@@ -19,14 +19,13 @@ namespace DeviceOrientation.Forms.Plugin.WindowsPhone
         /// </summary>
         public static void Init() 
         {
-            var rootFrame = (System.Windows.Application.Current.RootVisual as PhoneApplicationFrame);
-            if (rootFrame == null)
-                return;
-
-            rootFrame.OrientationChanged += rootFrame_OrientationChanged;
         }
 
-        static void rootFrame_OrientationChanged(object sender, OrientationChangedEventArgs e)
+        /// <summary>
+        /// Send orientation change message through MessagingCenter
+        /// </summary>
+        /// <param name="newConfig">New configuration</param>
+        public static void NotifyOrientationChange(OrientationChangedEventArgs e)
         {
             bool isLandscape = (e.Orientation & PageOrientation.Landscape) == PageOrientation.Landscape;
             var msg = new DeviceOrientationChangeMessage()
@@ -34,7 +33,6 @@ namespace DeviceOrientation.Forms.Plugin.WindowsPhone
                 Orientation = isLandscape ? DeviceOrientations.Landscape : DeviceOrientations.Portrait
             };
             MessagingCenter.Send<DeviceOrientationChangeMessage>(msg, DeviceOrientationChangeMessage.MessageId);
-   
         }
 
         /// <summary>
@@ -43,6 +41,10 @@ namespace DeviceOrientation.Forms.Plugin.WindowsPhone
         /// <returns>The orientation.</returns>
         public DeviceOrientations GetOrientation()
         {
+            var rootFrame = (System.Windows.Application.Current.RootVisual as PhoneApplicationFrame);
+            if (rootFrame == null)
+                return DeviceOrientations.Undefined;
+
             PageOrientation currentOrientation = (System.Windows.Application.Current.RootVisual as PhoneApplicationFrame).Orientation;
             bool isLandscape = (currentOrientation & PageOrientation.Landscape) == PageOrientation.Landscape;
             return isLandscape ? DeviceOrientations.Landscape : DeviceOrientations.Portrait;

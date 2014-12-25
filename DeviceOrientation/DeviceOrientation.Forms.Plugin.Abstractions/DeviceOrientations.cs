@@ -8,6 +8,11 @@ namespace DeviceOrientation.Forms.Plugin.Abstractions
     public enum DeviceOrientations
     {
         /// <summary>
+        /// Undefined
+        /// </summary>
+        Undefined,
+        
+        /// <summary>
         /// The landscape.
         /// </summary>
         Landscape,

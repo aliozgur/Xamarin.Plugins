@@ -1,30 +1,35 @@
-﻿using System;
+﻿using DeviceOrientation.Forms.Plugin.Abstractions;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Xamarin.Forms;
-using DeviceOrientation.Forms.Plugin.Abstractions;
 
 namespace DeviceOrientationDemo
 {
-    public class MainPage:ContentPage
+    public class ChildPage : ContentPage
     {
-        IDeviceOrientation _deviceOrientationSvc;
+         IDeviceOrientation _deviceOrientationSvc;
         private Label _label;
 
-        public MainPage()
+        public ChildPage()
         {
-            Title = "Main";
+            Title = "Child";
             _deviceOrientationSvc = DependencyService.Get<IDeviceOrientation>();
             PrepareControls();
         }
 
         private void PrepareControls()
         {
+
             var stackLayout = new StackLayout()
             {
                 VerticalOptions = LayoutOptions.FillAndExpand,
                 HorizontalOptions = LayoutOptions.FillAndExpand,
                 Padding = new Thickness(5)
             };
-           
+
             _label = new Label
             {
                 
@@ -32,21 +37,8 @@ namespace DeviceOrientationDemo
                 HorizontalOptions = LayoutOptions.CenterAndExpand,
             };
 
-            var button = new Button()
-            {
-                Text = "Navigate To Child",
-                HorizontalOptions = LayoutOptions.CenterAndExpand,
-                VerticalOptions = LayoutOptions.CenterAndExpand,
-                Command = new Command(() =>
-                {
-                    Navigation.PushAsync(new ChildPage());
-                })
-            };
-            
 
-            stackLayout.Children.Add(_label);
-            stackLayout.Children.Add(button);
-
+            stackLayout.Children.Add(_label);    
             Content = stackLayout;           
         }
 
@@ -54,7 +46,7 @@ namespace DeviceOrientationDemo
         {
             base.OnAppearing();
             
-            _label.Text = String.Format("Hello, Forms! My initial orientation is {0}", _deviceOrientationSvc.GetOrientation());
+            _label.Text = String.Format("I'm a child page! My initial orientation is {0}", _deviceOrientationSvc.GetOrientation());
             
             MessagingCenter.Subscribe<DeviceOrientationChangeMessage>(this, DeviceOrientationChangeMessage.MessageId, (message) =>
                 {
@@ -70,8 +62,7 @@ namespace DeviceOrientationDemo
 
         private void HandleOrientationChange(DeviceOrientationChangeMessage mesage)
         {
-            _label.Text = String.Format("Orientation changed to {0}", mesage.Orientation.ToString());
+            _label.Text = String.Format("I'm a child page! Orientation changed to {0}", mesage.Orientation.ToString());
         }
     }
 }
-
