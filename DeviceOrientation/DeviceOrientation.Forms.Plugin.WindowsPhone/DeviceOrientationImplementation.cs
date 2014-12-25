@@ -24,7 +24,7 @@ namespace DeviceOrientation.Forms.Plugin.WindowsPhone
         /// <summary>
         /// Send orientation change message through MessagingCenter
         /// </summary>
-        /// <param name="newConfig">New configuration</param>
+        /// <param name="e">Orientation changed event args</param>
         public static void NotifyOrientationChange(OrientationChangedEventArgs e)
         {
             bool isLandscape = (e.Orientation & PageOrientation.Landscape) == PageOrientation.Landscape;
