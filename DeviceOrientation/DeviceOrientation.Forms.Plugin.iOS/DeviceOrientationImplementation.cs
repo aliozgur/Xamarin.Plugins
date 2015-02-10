@@ -2,8 +2,14 @@
 using System;
 using Xamarin.Forms;
 using DeviceOrientation.Forms.Plugin.iOS;
+#if __UNIFIED__
+using UIKit;
+using Foundation;
+
+#else
 using MonoTouch.UIKit;
 using MonoTouch.Foundation;
+#endif
 
 [assembly: Dependency(typeof(DeviceOrientationImplementation))]
 namespace DeviceOrientation.Forms.Plugin.iOS
