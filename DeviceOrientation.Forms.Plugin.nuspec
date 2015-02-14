@@ -55,8 +55,8 @@
      <file src="DeviceOrientation\DeviceOrientation.Forms.Plugin.Abstractions\bin\Release\DeviceOrientation.Forms.Plugin.Abstractions.xml" target="lib\MonoTouch10\DeviceOrientation.Forms.Plugin.Abstractions.xml" />
 
      <!--Xamarin.iOSUnified-->
-     <file src="DeviceOrientation\DeviceOrientation.Forms.Plugin.iOSUnified\bin\iPhone\Release\DeviceOrientation.Forms.Plugin.iOSUnified.dll" target="lib\Xamarin.iOS10\DeviceOrientation.Forms.Plugin.iOSUnified.dll" />
-     <file src="DeviceOrientation\DeviceOrientation.Forms.Plugin.iOSUnified\bin\iPhone\Release\DeviceOrientation.Forms.Plugin.iOSUnified.xml" target="lib\Xamarin.iOS10\DeviceOrientation.Forms.Plugin.iOSUnified.xml" />
+     <file src="DeviceOrientation\DeviceOrientation.Forms.Plugin.iOSUnified\bin\Release\DeviceOrientation.Forms.Plugin.iOSUnified.dll" target="lib\Xamarin.iOS10\DeviceOrientation.Forms.Plugin.iOSUnified.dll" />
+     <file src="DeviceOrientation\DeviceOrientation.Forms.Plugin.iOSUnified\bin\Release\DeviceOrientation.Forms.Plugin.iOSUnified.xml" target="lib\Xamarin.iOS10\DeviceOrientation.Forms.Plugin.iOSUnified.xml" />
      <file src="DeviceOrientation\DeviceOrientation.Forms.Plugin.Abstractions\bin\Release\DeviceOrientation.Forms.Plugin.Abstractions.dll" target="lib\Xamarin.iOS10\DeviceOrientation.Forms.Plugin.Abstractions.dll" />
      <file src="DeviceOrientation\DeviceOrientation.Forms.Plugin.Abstractions\bin\Release\DeviceOrientation.Forms.Plugin.Abstractions.xml" target="lib\Xamarin.iOS10\DeviceOrientation.Forms.Plugin.Abstractions.xml" />
 
